@@ -1,0 +1,95 @@
+2024-05-08 16:26:53.197 [main] INFO  com.example.demo.LogApplication - Starting LogApplication using Java 17.0.10 with PID 10420 (C:\Users\nishanth.s\Documents\Java Workspace\Log\target\classes started by nishanth.s in C:\Users\nishanth.s\Documents\Java Workspace\Log)
+2024-05-08 16:26:53.208 [main] INFO  com.example.demo.LogApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-08 16:26:54.027 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-08 16:26:54.043 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-08 16:26:54.047 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-08 16:26:54.047 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-08 16:26:54.110 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-08 16:26:54.111 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 854 ms
+2024-05-08 16:26:54.442 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-08 16:26:54.448 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-05-08 16:26:54.464 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-05-08 16:26:54.481 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-05-08 16:27:10.730 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Could not initialize Log4J2 logging from classpath:log4j2.properties
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.2.5.jar:3.2.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-3.2.5.jar:3.2.5]
+	at com.example.demo.LogApplication.main(LogApplication.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Could not initialize Log4J2 logging from classpath:log4j2.properties
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:276) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.load(Log4J2LoggingSystem.java:245) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:237) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:67) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:58) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:224) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:335) ~[spring-boot-3.2.5.jar:3.2.5]
+	... 19 more
+Caused by: java.io.FileNotFoundException: class path resource [log4j2.properties] cannot be resolved to URL because it does not exist
+	at org.springframework.util.ResourceUtils.getURL(ResourceUtils.java:138) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.load(Log4J2LoggingSystem.java:281) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:267) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.load(Log4J2LoggingSystem.java:245) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:237) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:67) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:58) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:224) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:335) ~[spring-boot-3.2.5.jar:3.2.5]
+	... 19 more
+2024-05-08 16:27:21.772 [main] INFO  com.example.demo.LogApplication - Starting LogApplication using Java 17.0.10 with PID 2984 (C:\Users\nishanth.s\Documents\Java Workspace\Log\target\classes started by nishanth.s in C:\Users\nishanth.s\Documents\Java Workspace\Log)
+2024-05-08 16:27:21.783 [main] INFO  com.example.demo.LogApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-08 16:27:22.632 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-08 16:27:22.644 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-08 16:27:22.647 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-08 16:27:22.648 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-08 16:27:22.700 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-08 16:27:22.700 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 869 ms
+2024-05-08 16:27:23.002 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-08 16:27:23.030 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-08 16:27:23.038 [main] INFO  com.example.demo.LogApplication - Started LogApplication in 1.761 seconds (process running for 2.85)
+2024-05-08 16:29:17.858 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-08 16:29:17.859 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-08 16:29:17.861 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-05-08 16:29:17.898 [http-nio-8080-exec-1] INFO  com.example.demo.log.Log4j - Log is present
+2024-05-08 16:29:17.898 [http-nio-8080-exec-1] DEBUG com.example.demo.log.Log4j - Debug is Working now
+2024-05-08 16:29:19.012 [http-nio-8080-exec-2] INFO  com.example.demo.log.Log4j - Log is present
+2024-05-08 16:29:19.012 [http-nio-8080-exec-2] DEBUG com.example.demo.log.Log4j - Debug is Working now
+2024-05-08 16:29:19.211 [http-nio-8080-exec-3] INFO  com.example.demo.log.Log4j - Log is present
+2024-05-08 16:29:19.211 [http-nio-8080-exec-3] DEBUG com.example.demo.log.Log4j - Debug is Working now
+2024-05-08 16:29:19.387 [http-nio-8080-exec-4] INFO  com.example.demo.log.Log4j - Log is present
+2024-05-08 16:29:19.388 [http-nio-8080-exec-4] DEBUG com.example.demo.log.Log4j - Debug is Working now
+2024-05-08 16:29:19.723 [http-nio-8080-exec-5] INFO  com.example.demo.log.Log4j - Log is present
+2024-05-08 16:29:19.724 [http-nio-8080-exec-5] DEBUG com.example.demo.log.Log4j - Debug is Working now
+2024-05-08 16:31:50.154 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-05-08 16:31:50.158 [RMI TCP Connection(8)-127.0.0.1] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
